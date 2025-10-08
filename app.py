@@ -90,7 +90,7 @@ if uploaded_file:
 
     result = model.transcribe(audio_path)
 
-    st.subheader("📝 Transcribed Text")
+    st.subheader("📝 Generated Notes")
     st.text_area("Transcript", value=result['text'], height=200)
 
     # --------------------------
@@ -112,7 +112,7 @@ if uploaded_file:
             return response.choices[0].message.content
 
     # --------------------------
-    # Generate Notes
+    # Generate New Note
     # --------------------------
     if generate_notes:
         with tabs[0]:
